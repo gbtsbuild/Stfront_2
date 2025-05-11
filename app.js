@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Website is ready to serve GBTS Builders customers!');
 
     const slides = document.querySelectorAll('.slides img');
+    console.log('Slides found:', slides.length);
     let currentIndex = 0;
 
     function updateSlides() {
