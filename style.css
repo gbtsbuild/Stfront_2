@@ -16,7 +16,7 @@ header .tagline {
     margin-top: 0.5rem;
 }
 nav {
-    background: #2E8B57;
+    background: #00A36C;
     padding: 0.5rem 0;
 }
 nav .menu {
@@ -58,7 +58,7 @@ nav .menu li:hover > .submenu {
     display: block;
 }
 footer {
-    background: #2E8B57; /* Updated Footer Background Color */
+    background: #00A36C; /* Updated Footer Background Color */
     color: white;
     text-align: center;
     padding: 1rem 0;
