@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Website is ready to serve GBTS Builders customers!');
 
