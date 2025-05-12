@@ -69,6 +69,67 @@ nav .menu li:hover > .submenu {
     display: block;
 }
 
+.featured-products {
+    padding: 2rem;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.featured-products h2 {
+    color: #0D3B66;
+    margin-bottom: 1.5rem;
+}
+
+.featured-products .product {
+    display: inline-block;
+    width: 300px;
+    margin: 0 1rem 2rem;
+    padding: 1rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.featured-products .product img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.featured-products .product h3 {
+    color: #3E92CC;
+    margin-bottom: 0.5rem;
+}
+
+.featured-products .product .price {
+    color: #F4D35E;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-products .product .description {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.featured-products .cta-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #0D3B66;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.featured-products .cta-button:hover {
+    background-color: #3E92CC;
+}
+
 footer {
     background: #0D3B66;
     color: white;
@@ -97,42 +158,8 @@ footer .social-media a:hover {
     color: #F4D35E;
 }
 
-.slider {
-    position: relative;
-    max-width: 100%;
-    margin: 2rem auto;
-    overflow: hidden;
-}
-
-.slides img {
-    width: 100%;
-    display: none;
-}
-
-.slides img.active {
-    display: block;
-}
-
-.slider button.prev, .slider button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(13, 59, 102, 0.5);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-.slider button.prev {
-    left: 10px;
-}
-
-.slider button.next {
-    right: 10px;
-}
-
-.slider button.prev:hover, .slider button.next:hover {
-    background: #3E92CC;
+footer .copyright {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #DDD;
 }
