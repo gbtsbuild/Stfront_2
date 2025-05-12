@@ -185,9 +185,9 @@ footer {
     background: #0D3B66;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
     margin-top: auto;
-    font-size: 0.9rem; /* Reduced font size */
+    font-size: 0.9rem;
 }
 
 footer .footer-links a {
@@ -201,13 +201,13 @@ footer .footer-links a:hover {
 }
 
 footer address {
-    text-align: left; /* Align address to the left */
+    text-align: left;
     margin: 1rem auto;
     max-width: 600px;
 }
 
 footer address a {
-    color: white; /* Email and phone number in white */
+    color: white;
     text-decoration: none;
 }
 
@@ -227,34 +227,43 @@ footer .social-media a:hover {
 
 footer .copyright {
     margin-top: 1rem;
-    font-size: 0.8rem; /* Reduced font size */
+    font-size: 0.8rem;
     color: #DDD;
 }
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    /* Adjust header font size */
     header h1 {
         font-size: 1.5rem;
+        padding: 0.5rem; /* Reduced padding for smaller screens */
     }
 
     header .tagline {
         font-size: 1rem;
     }
 
-    nav .menu {
-        flex-wrap: nowrap;
-        overflow-x: auto;
+    /* Reduce padding in main sections for mobile */
+    .featured-products,
+    .blog-section {
+        padding: 1rem; /* Reduce padding for smaller screens */
     }
 
-    nav .menu li {
-        flex: 0 0 auto;
+    .featured-products .product {
+        width: 100%; /* Ensure product boxes take full width */
+        margin: 0 0 1rem; /* Reduce margin for better spacing */
     }
 
-    nav .menu a {
-        padding: 0.5rem;
+    .blog-excerpt {
+        padding: 0 1rem; /* Add padding for consistency */
+    }
+
+    footer {
+        padding: 0.5rem; /* Reduce padding in footer */
     }
 
     footer address {
-        font-size: 0.8rem; /* Adjusted font size for mobile */
+        font-size: 0.8rem; /* Adjust font size for mobile */
+        padding: 0 1rem; /* Add padding for mobile alignment */
     }
 }
