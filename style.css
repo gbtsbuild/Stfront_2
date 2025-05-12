@@ -2,23 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #222;
+    background-color: #F5F7FA;
     line-height: 1.6;
 }
+
 header {
-    background: #8FBC8F;/* Updated Header Background Color */
+    background: #0D3B66;
     color: white;
     text-align: center;
     padding: 1rem 0;
 }
+
 header .tagline {
     font-size: 1.2rem;
     margin-top: 0.5rem;
 }
+
 nav {
-    background: #238E68;
+    background: #3E92CC;
     padding: 0.5rem 0;
 }
+
 nav .menu {
     list-style: none;
     margin: 0;
@@ -27,15 +32,19 @@ nav .menu {
     justify-content: center;
     gap: 1rem;
 }
+
 nav .menu li {
     position: relative;
 }
+
 nav .menu a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
+    white-space: nowrap;
 }
+
 nav .menu .submenu {
     display: none;
     position: absolute;
@@ -45,65 +54,85 @@ nav .menu .submenu {
     margin: 0;
     top: 100%;
     left: 0;
+    min-width: 150px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
+
 nav .menu .submenu li {
-    width: 150px;
+    border-bottom: 1px solid #eee;
 }
+
 nav .menu .submenu a {
-    color: #333;
-    text-decoration: none;
+    color: #0D3B66;
+    padding: 0.5rem 1rem;
 }
+
 nav .menu li:hover > .submenu {
     display: block;
 }
+
 footer {
-    background: #8FBC8F; /* Updated Footer Background Color */
+    background: #0D3B66;
     color: white;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
 }
+
 footer .footer-links {
     margin-bottom: 1rem;
 }
+
 footer .footer-links a {
-    color: #00FFFF; /* Matching Header Color for Footer Links */
+    color: #F4D35E;
     text-decoration: none;
     margin: 0 0.5rem;
 }
+
 footer .social-media a {
     display: inline-block;
     margin: 0 0.5rem;
-    color: #FFF; /* Matching Header Color for Social Media Links */
-    text-decoration: none;
+    color: white;
+    text-decoration: nne;
 }
+
+/* SLIDER */
 .slider {
     position: relative;
+    width: 100%;
     max-width: 100%;
-    margin: 2rem auto;
     overflow: hidden;
+    margin: 2rem auto;
 }
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
 .slides img {
     width: 100%;
-    display: none;
+    flex-shrink: 0;
 }
-.slides img.active {
-    display: block;
-}
-.slider button.prev, .slider button.next {
+
+.slider button.prev,
+.slider button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(13, 59, 102, 0.5);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    z-index: 10;
 }
+
 .slider button.prev {
     left: 10px;
 }
+
 .slider button.next {
     right: 10px;
-}
