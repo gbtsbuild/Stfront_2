@@ -2,7 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Website is ready to serve GBTS Builders customers!');
 
     const slides = document.querySelectorAll('.slides img');
-    console.log('Slides found:', slides.length);
+    if (slides.length === 0) {
+        console.error('No slides found!');
+        return;
+    }
+
     let currentIndex = 0;
 
     function updateSlides() {
@@ -18,10 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateSlides();
 
-    document.querySelector('.prev')?.addEventListener('click', function () {
-        moveSlide(-1);
-    });
-    document.querySelector('.next')?.addEventListener('click', function () {
-        moveSlide(1);
-    });
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => moveSlide(-1));
+    } else {
+        console.error('Previous button not found!');
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => moveSlide(1));
+    } else {
+        console.error('Next button not found!');
+    }
 });
