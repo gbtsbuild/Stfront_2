@@ -6,7 +6,7 @@ body {
     line-height: 1.6;
 }
 header {
-    background: #5F9EAD; /* Updated Header Background Color */
+    background: #9CCC65; /* Updated Header Background Color */
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -16,7 +16,7 @@ header .tagline {
     margin-top: 0.5rem;
 }
 nav {
-    background: #696969;
+    background: #2E8B57;
     padding: 0.5rem 0;
 }
 nav .menu {
@@ -58,9 +58,9 @@ nav .menu li:hover > .submenu {
     display: block;
 }
 footer {
-    background: #696969; /* Updated Footer Background Color */
+    background: #2E8B57; /* Updated Footer Background Color */
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
 }
