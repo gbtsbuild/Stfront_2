@@ -16,7 +16,7 @@ header .tagline {
     margin-top: 0.5rem;
 }
 nav {
-    background: #218838;
+    background: #000000;
     padding: 0.5rem 0;
 }
 nav .menu {
@@ -58,7 +58,7 @@ nav .menu li:hover > .submenu {
     display: block;
 }
 footer {
-    background: #4CAF50; /* Updated Footer Background Color */
+    background: #000000; /* Updated Footer Background Color */
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -68,14 +68,14 @@ footer .footer-links {
     margin-bottom: 1rem;
 }
 footer .footer-links a {
-    color: #5F9EAD; /* Matching Header Color for Footer Links */
+    color: #00FFFF; /* Matching Header Color for Footer Links */
     text-decoration: none;
     margin: 0 0.5rem;
 }
 footer .social-media a {
     display: inline-block;
     margin: 0 0.5rem;
-    color: #5F9EAD; /* Matching Header Color for Social Media Links */
+    color: #00FFFF; /* Matching Header Color for Social Media Links */
     text-decoration: none;
 }
 .slider {
