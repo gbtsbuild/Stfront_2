@@ -1,4 +1,4 @@
-/* General Styles for Mobile Responsiveness */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +6,9 @@ body {
     color: #222;
     background-color: #F5F7FA;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Styles */
@@ -16,9 +19,8 @@ header {
     padding: 1rem 0;
 }
 
-/* Ensure header tagline is responsive */
 header .tagline {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1.2rem;
     margin-top: 0.5rem;
 }
 
@@ -28,32 +30,27 @@ nav {
     padding: 0.5rem 0;
 }
 
-/* Navigation Menu Styling */
 nav .menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     justify-content: center;
-    gap: 0.5rem; /* Adjust gap for better spacing */
+    gap: 1rem;
 }
 
-/* Menu Items */
 nav .menu li {
     position: relative;
 }
 
-/* Links */
 nav .menu a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
-    text-align: center; /* Center text for smaller screens */
+    text-align: center;
 }
 
-/* Submenu Styling */
 nav .menu .submenu {
     display: none;
     position: absolute;
@@ -76,37 +73,188 @@ nav .menu .submenu a {
     display: block;
 }
 
-/* Show Submenu on Hover */
 nav .menu li:hover > .submenu {
     display: block;
 }
 
-/* Responsive Adjustments for Smaller Screens */
-@media screen and (max-width: 768px) {
-    /* Adjust header padding and font sizes */
-    header {
-        padding: 0.5rem 0;
-    }
+/* Featured Products Section */
+.featured-products {
+    padding: 2rem;
+    text-align: center;
+    background-color: #FFFFFF;
+    flex: 1;
+}
 
+.featured-products h2 {
+    color: #0D3B66;
+    margin-bottom: 1.5rem;
+}
+
+.featured-products .product {
+    display: inline-block;
+    width: 300px;
+    margin: 0 1rem 2rem;
+    padding: 1rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.featured-products .product img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.featured-products .product h3 {
+    color: #3E92CC;
+    margin-bottom: 0.5rem;
+}
+
+.featured-products .product .price {
+    color: #F4D35E;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-products .product .description {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.featured-products .cta-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #0D3B66;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.featured-products .cta-button:hover {
+    background-color: #3E92CC;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.blog-section h2 {
+    color: #0D3B66;
+    margin-bottom: 1.5rem;
+}
+
+.blog-excerpt {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-excerpt h3 {
+    color: #3E92CC;
+    margin-bottom: 0.5rem;
+}
+
+.blog-excerpt p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.blog-excerpt .read-more {
+    color: #0D3B66;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-excerpt .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background: #0D3B66;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+footer .footer-links a {
+    color: #F4D35E;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer address {
+    text-align: left; /* Align address to the left */
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+footer address a {
+    color: white; /* Email and phone number in white */
+    text-decoration: none;
+}
+
+footer address a:hover {
+    text-decoration: underline;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer .social-media a:hover {
+    color: #F4D35E;
+}
+
+footer .copyright {
+    margin-top: 1rem;
+    font-size: 0.8rem; /* Reduced font size */
+    color: #DDD;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem; /* Smaller font size for the title */
+        font-size: 1.5rem;
     }
 
     header .tagline {
-        font-size: 0.9rem; /* Smaller font size for tagline */
+        font-size: 1rem;
     }
 
-    /* Adjust navigation menu for mobile */
     nav .menu {
-        flex-direction: column; /* Stack menu items vertically */
-        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
     }
 
     nav .menu li {
-        width: 100%; /* Full-width menu items */
+        flex: 0 0 auto;
     }
 
     nav .menu a {
-        padding: 0.8rem 1rem; /* Increase padding for touch devices */
+        padding: 0.5rem;
+    }
+
+    footer address {
+        font-size: 0.8rem; /* Adjusted font size for mobile */
     }
 }
