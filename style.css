@@ -1,3 +1,82 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    background-color: #F5F7FA;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background: #0D3B66; /* Deep blue for the header */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Navigation Styles */
+nav {
+    background: #3E92CC; /* Light blue navigation background */
+    padding: 0.5rem 0;
+}
+
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ensure menu items are horizontally aligned */
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav .menu li {
+    position: relative;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: center;
+}
+
+nav .menu .submenu {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+nav .menu .submenu li {
+    width: 150px;
+}
+
+nav .menu .submenu a {
+    color: #0D3B66;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav .menu li:hover > .submenu {
+    display: block;
+}
+
 /* Featured Products Section */
 .featured-products {
     padding: 2rem;
@@ -13,7 +92,7 @@
 
 .featured-products .product {
     display: inline-block;
-    width: 250px; /* Reduced the overall product box width */
+    width: 250px; /* Reduced width for better layout */
     margin: 0 1rem 2rem;
     padding: 1rem;
     border: 1px solid #E0E0E0;
@@ -24,9 +103,9 @@
 }
 
 .featured-products .product img {
-    width: 100%; /* Ensure the image takes up the entire width of the product box */
-    max-width: 220px; /* Reduce the image width for better display on smaller screens */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 220px;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
@@ -63,13 +142,137 @@
     background-color: #3E92CC;
 }
 
+/* Blog Section */
+.blog-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.blog-section h2 {
+    color: #0D3B66;
+    margin-bottom: 1.5rem;
+}
+
+.blog-excerpt {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-excerpt h3 {
+    color: #3E92CC;
+    margin-bottom: 0.5rem;
+}
+
+.blog-excerpt p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.blog-excerpt .read-more {
+    color: #0D3B66;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-excerpt .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background: #0D3B66; /* Deep blue footer */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+footer .footer-links a {
+    color: #F4D35E;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer address {
+    text-align: left;
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+footer address a {
+    color: white;
+    text-decoration: none;
+}
+
+footer address a:hover {
+    text-decoration: underline;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer .social-media a:hover {
+    color: #F4D35E;
+}
+
+footer .copyright {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #DDD;
+}
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    header .tagline {
+        font-size: 1rem;
+    }
+
+    nav .menu {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap; /* Ensure horizontal scrolling */
+    }
+
+    nav .menu li {
+        flex: 0 0 auto;
+    }
+
+    .featured-products,
+    .blog-section {
+        padding: 1rem;
+    }
+
     .featured-products .product {
-        width: 100%; /* Ensure product boxes take full width */
+        width: 100%; /* Full width for product boxes on mobile */
     }
 
     .featured-products .product img {
-        max-width: 180px; /* Further reduce the image width for smaller screens */
+        max-width: 180px; /* Reduce image size for mobile */
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+
+    footer address {
+        font-size: 0.8rem;
+        padding: 0 1rem;
     }
 }
