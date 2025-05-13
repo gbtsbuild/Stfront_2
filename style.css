@@ -146,10 +146,10 @@ nav .menu li:hover > .submenu {
 
 /* Blog Section */
 .blog-section {
-    padding: 2rem;
+    padding: 2rem 0;
     text-align: center;
     background-color: #FFFFFF;
-    max-width: 1100px; /* Matches the header width */
+    max-width: 1100px; /* Matches the featured products section width */
     margin: 0 auto; /* Centers the section */
 }
 
