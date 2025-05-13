@@ -17,8 +17,6 @@ header {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    max-width: 1100px; /* Consistent width */
-    margin: 0 auto; /* Center horizontally */
 }
 
 header .tagline {
@@ -85,8 +83,8 @@ nav .menu li:hover > .submenu {
     text-align: center;
     background-color: #FFFFFF;
     flex: 1;
-    max-width: 1100px; /* Matches the header and footer width */
-    margin: 0 auto; /* Center horizontally */
+    max-width: 1100px; /* Matches the header's width */
+    margin: 0 auto; /* Centers the section */
 }
 
 .featured-products h2 {
@@ -148,11 +146,11 @@ nav .menu li:hover > .submenu {
 
 /* Blog Section */
 .blog-section {
-    padding: 2rem;
+    padding: 2rem 0;
     text-align: center;
     background-color: #FFFFFF;
-    max-width: 1100px; /* Matches the header and footer width */
-    margin: 0 auto; /* Center horizontally */
+    max-width: 1100px; /* Matches the featured products section width */
+    margin: 0 auto; /* Centers the section */
 }
 
 .blog-section h2 {
@@ -196,8 +194,6 @@ footer {
     padding: 1rem;
     margin-top: auto;
     font-size: 0.9rem;
-    max-width: 1100px; /* Matches the header and blog width */
-    margin: 0 auto; /* Center horizontally */
 }
 
 footer .footer-links a {
@@ -264,8 +260,7 @@ footer .copyright {
     }
 
     .featured-products,
-    .blog-section,
-    footer {
+    .blog-section {
         padding: 1rem;
         max-width: 95%; /* Adjust to fit mobile screens */
     }
@@ -276,6 +271,10 @@ footer .copyright {
 
     .featured-products .product img {
         max-width: 180px; /* Reduce image size for mobile */
+    }
+
+    footer {
+        padding: 0.5rem;
     }
 
     footer address {
