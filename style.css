@@ -58,12 +58,13 @@ nav .menu .submenu {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem 0;
     z-index: 100;
+    width: 200px;
 }
 
 nav .menu .submenu li {
-    width: 150px;
+    width: 100%;
 }
 
 nav .menu .submenu a {
@@ -74,21 +75,28 @@ nav .menu .submenu a {
 }
 
 nav .menu li:hover > .submenu {
-    display: block;
+    display: block; /* Show submenu on hover */
+}
+
+/* Section Containers */
+.section-container {
+    width: 90%;
+    max-width: 1100px; /* Matches the header width */
+    margin: 2rem auto; /* Centers the container and adds spacing */
+    padding: 1rem;
+    background-color: #0D3B66; /* Matches header background */
+    color: white; /* White text for contrast */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for separation */
+    border-radius: 8px;
 }
 
 /* Featured Products Section */
 .featured-products {
-    padding: 1rem 0;
     text-align: center;
-    background-color: #FFFFFF;
-    flex: 1;
-    max-width: 1100px; /* Matches the header's width */
-    margin: 0 auto; /* Centers the section */
 }
 
 .featured-products h2 {
-    color: #0D3B66;
+    color: #F4D35E; /* Accent color to differentiate section headings */
     margin-bottom: 1.5rem;
 }
 
@@ -99,7 +107,7 @@ nav .menu li:hover > .submenu {
     padding: 1rem;
     border: 1px solid #E0E0E0;
     border-radius: 8px;
-    background-color: #F9F9F9;
+    background-color: #F9F9F9; /* Light background for cards */
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -146,15 +154,11 @@ nav .menu li:hover > .submenu {
 
 /* Blog Section */
 .blog-section {
-    padding: 2rem 0;
     text-align: center;
-    background-color: #FFFFFF;
-    max-width: 1100px; /* Matches the featured products section width */
-    margin: 0 auto; /* Centers the section */
 }
 
 .blog-section h2 {
-    color: #0D3B66;
+    color: #F4D35E; /* Accent color to differentiate section headings */
     margin-bottom: 1.5rem;
 }
 
@@ -164,6 +168,7 @@ nav .menu li:hover > .submenu {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    color: #F9F9F9; /* Light text for contrast */
 }
 
 .blog-excerpt h3 {
@@ -172,12 +177,12 @@ nav .menu li:hover > .submenu {
 }
 
 .blog-excerpt p {
-    color: #555;
+    color: #E0E0E0;
     margin-bottom: 0.5rem;
 }
 
 .blog-excerpt .read-more {
-    color: #0D3B66;
+    color: #F4D35E;
     text-decoration: none;
     font-weight: bold;
 }
@@ -222,10 +227,16 @@ footer address a:hover {
     text-decoration: underline;
 }
 
+footer .social-media {
+    margin: 1rem 0;
+}
+
 footer .social-media a {
     color: white;
     text-decoration: none;
     margin: 0 0.5rem;
+    font-size: 1.5rem; /* Larger size for icons */
+    display: inline-block;
 }
 
 footer .social-media a:hover {
@@ -259,10 +270,8 @@ footer .copyright {
         flex: 0 0 auto;
     }
 
-    .featured-products,
-    .blog-section {
-        padding: 1rem;
-        max-width: 95%; /* Adjust to fit mobile screens */
+    .section-container {
+        width: 95%; /* Adjust to fit mobile screens */
     }
 
     .featured-products .product {
