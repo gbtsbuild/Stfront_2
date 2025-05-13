@@ -83,6 +83,8 @@ nav .menu li:hover > .submenu {
     text-align: center;
     background-color: #FFFFFF;
     flex: 1;
+    max-width: 1100px; /* Matches the header's width */
+    margin: 0 auto; /* Centers the section */
 }
 
 .featured-products h2 {
@@ -147,6 +149,8 @@ nav .menu li:hover > .submenu {
     padding: 2rem;
     text-align: center;
     background-color: #FFFFFF;
+    max-width: 1100px; /* Matches the header width */
+    margin: 0 auto; /* Centers the section */
 }
 
 .blog-section h2 {
@@ -258,6 +262,7 @@ footer .copyright {
     .featured-products,
     .blog-section {
         padding: 1rem;
+        max-width: 95%; /* Adjust to fit mobile screens */
     }
 
     .featured-products .product {
@@ -276,5 +281,4 @@ footer .copyright {
         font-size: 0.8rem;
         padding: 0 1rem;
     }
-    }
-    
+}
